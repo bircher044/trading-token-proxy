@@ -60,7 +60,7 @@ interface IUniswapV2Router02 {
     function addLiquidityETH(address token, uint256 amountTokenDesired, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline) external payable returns (uint256 amountToken, uint256 amountETH, uint256 liquidity);
 }
 
-contract Tommy is Ownable, IERC20 {
+contract Token is Ownable, IERC20 {
     string private constant _name = unicode"Tommy Coin";
     string private constant _symbol = unicode"TOMMY";
 

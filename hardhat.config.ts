@@ -4,7 +4,7 @@ dotenv.config();
 
 export default {
   solidity: {
-    version: "0.8.23"
+    version: "0.8.25"
   },
   settings: {
     optimizer: {

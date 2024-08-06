@@ -1,10 +1,11 @@
 import { ethers } from "hardhat";
-//import {  } from "../typechain-types";
+import { Tax__factory } from "../typechain-types";
 
 async function main() {
     const [signer] = await ethers.getSigners();
-    // const token = await new NatureRex__factory(signer).deploy(liquidity, marketing, ecoFunds, community, cexReserve, reserveFund);
-    // console.log(`CA: ${await token.getAddress()}`);
+    const tax = await new Tax__factory(signer).deploy();
+
+    console.log(`CA: ${await tax.getAddress()}`);
 }
 
 main().catch((error) => {
