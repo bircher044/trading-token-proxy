@@ -21,9 +21,10 @@ contract Tax {
     address tokenAddr; //uniswap lp token
     address owner;
     event Whitelisted (address indexed _address);
-    IUniswapV2Router02 public constant uniswapV2Router= IUniswapV2Router02(0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D);
+    IUniswapV2Router02 public immutable uniswapV2Router;
 
-    constructor(){
+    constructor(address _router){
+        uniswapV2Router = IUniswapV2Router02(_router);
         owner = msg.sender; 
     }
 
